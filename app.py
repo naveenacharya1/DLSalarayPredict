@@ -17,9 +17,9 @@ def predict():
     '''
     For rendering results on HTML GUI
     '''
-    yeardOfExp = float(request.form['yeardOfExp'])
+    yearsOfExp = float(request.form['yearsOfExp'])
     
-    feature = np.array([[yeardOfExp]])
+    feature = np.array([[yearsOfExp]])
     stdFeatures = scFeatures.transform(feature)
     predLabel = model.predict(stdFeatures)
     
